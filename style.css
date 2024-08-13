@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap');
+
+:root {
+    --font-family: 'Noto Sans';
+    --normal-font: 300;
+    --bold-font: 600;
+    --bg-color: #ececec;
+    --primary-color: #323232;
+    --secondary-color: #0f68c1;
+    --tertiary-color: #4FAE7D;
+    --quarternary-color: #2f8f56;
+    --bottom-margin: 0.5rem;
+    --line-height: 2.2rem;
+    --transition: 0.5s;
+}
+
+/* for typer cursor */
+span { 
+    animation: blinker 1s linear infinite;
+}
+
+/* blinking cursor */
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeInPage {
+    0% {
+     opacity: 0;
+     }
+    100% {
+     opacity: 1;
+     }
+}
+
+/* css resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    padding: 0rem 0.5rem;
+    padding-bottom: 1rem;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+}
+
+#lets-fade {
+    animation: fadeInPage ease 1.5s;
+    animation-iteration-count: 1;
+}
+
+/* for all pages (except landing) */
+.about-me-title, .experience-title, .education-title, .projects-title, .contact-title {
+    padding: 0.3rem 2rem;
+    position: relative;
+    padding-top: 3rem;
+    font-size: 6rem;
+    background: linear-gradient(to right, var(--secondary-color) 0%, var(--tertiary-color) 25%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.about-me, .experience, .education, .projects, .contact {
+    padding: 0rem 2rem;
+}
+
+.h2-title {
+    padding-bottom: 0.3rem;
+    font-size: 2.2rem;
+}
+
+.h3-title {
+    padding-bottom: 0.5rem;
+}
+
+.desc {
+    font-size: 1.1rem;
+    padding-right: 1rem;
+    margin-right: 2rem;
+}
+
+.section {
+    padding: 1.7rem 0.6rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--quarternary-color);
+    transition: var(--transition);
+    transition-property: color;
+    transition-timing-function: linear;
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+/* navigation bar (on all) */
+ul {
+    list-style-type: none;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left:  0.2rem;
+    padding-right: 2rem;
+    float: right;
+    text-decoration: none;
+    background: var(--bg-color);
+}
+
+nav p {
+    float: left;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    transition: var(--transition);
+    transition-property: color;
+    transition-timing-function: linear;
+}
+
+nav ul a:hover {
+    color: var(--tertiary-color);
+}
+
+nav ul {
+    display: flex;
+    gap: 3rem;
+}
+
+nav ul li {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+/* navigation for all other pages (except title) */
+.main-header {
+    padding: 0rem 2rem;
+    padding-top: 1.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+}
+
+.main-header p {
+    padding: 0rem;
+    font-size: 2rem;
+    font-weight: var(--bold-font);
+}
+
+.go-home-title {
+    color: var(#5d9ede);
+}
+
+/* title page -> landing */
+.home-nav{
+    padding-top: 1.4rem;
+}
+
+.title-page {
+    position: absolute;
+    margin-top: 18.8%;
+    padding: 0rem 2rem;
+}
+
+.title {
+    font-family: var(--font-family);
+    font-weight: var(--bold-font);
+    font-size: 6.2rem;
+    background: linear-gradient(to right, var(--secondary-color) 0%, var(--tertiary-color) 40%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.title-page p {
+    font-size: 1.15rem;
+    color: var(--primary-color);
+    line-height: 1.8rem;
+    margin-right: 0.5rem;
+}
+
+/* about me page */
+.bio {
+    padding-top: 1.7rem;
+}
+.bio p {
+    padding-bottom: 1rem;
+    font-size: 1.15rem;
+    line-height: 1.6rem;
+}
+
+.bio img {
+    padding-left: 2rem;
+    float: right;
+    width: 25rem;
+    height: 32rem;
+}
+
+/* experience page */
+.exp-link {
+    text-decoration: none;
+    color: var(--secondary-color);
+    transition: var(--transition);
+    transition-property: color;
+    transition-timing-function: linear;
+}
+
+.exp-link:hover {
+    color: var(--tertiary-color);
+}
+
+/* contact */
+.resume {
+    float: right;
+    margin-right: 3rem;
+    width: 40%;
+    height: 25rem;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 10.5rem;
+    background: linear-gradient(to right, var(--secondary-color) 0%, var(--tertiary-color) 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
